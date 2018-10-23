@@ -21,7 +21,8 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "moment": "^2.22.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "postcss-merge-longhand": "^4.0.9"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

@@ -54,7 +54,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     postcss: false, // yarn build 报错 https://github.com/nuxt/nuxt.js/issues/4143
+    
     /*
     ** You can extend webpack config here
     */

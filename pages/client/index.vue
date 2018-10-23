@@ -95,8 +95,9 @@ export default {
       this.updateQueryAndFetchList( {...this.$router.currentRoute.query, keyword: this.keyword})
     },
     updateQueryAndFetchList (query = {}) {
-      this.$router.push({name: 'client', query})
-      this.fetchList()
+      this.$router.push({name: 'client', query}, () => { // this.$router.push MAYBE an ASYNC operation
+        this.fetchList()
+      })
     } 
   }
 }

@@ -19,11 +19,6 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-
-  /*
   ** Global CSS
   */
   css: [
@@ -59,6 +54,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    postcss: false, // yarn build 报错 https://github.com/nuxt/nuxt.js/issues/4143
     /*
     ** You can extend webpack config here
     */
@@ -67,7 +63,13 @@ module.exports = {
     }
   },
 
+  // 配置vue-router
   router: {
     base: '/blog'
-  }
+  },
+
+  // 配置进度条
+  loading: {
+    color: 'linear-gradient(to right, #CDDC39, #F44336)',
+  },
 }

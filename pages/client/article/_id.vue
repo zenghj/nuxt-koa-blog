@@ -20,6 +20,11 @@ export default {
   fetch({store, params}) {
     return store.dispatch('FETCH_ARTICLE_INFO', params)
   },
+  head() {
+    return {
+      title: this.article.title,
+    }
+  },
   data () {
     return {
       

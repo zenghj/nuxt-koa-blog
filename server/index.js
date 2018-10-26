@@ -36,7 +36,7 @@ async function start() {
 
   app.listen(port, host)
   consola.ready({
-    message: `Server listening on http://${host}:${port}/blog/client`,
+    message: `Server listening on http://${host}:${port}/ssr/blog/client`,
     badge: true
   })
 }

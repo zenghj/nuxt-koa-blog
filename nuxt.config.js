@@ -67,7 +67,7 @@ module.exports = {
 
   // 配置vue-router
   router: {
-    base: '/blog'
+    base: '/ssr/blog'
   },
 
   // 配置进度条

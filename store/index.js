@@ -19,7 +19,7 @@ const mutations = {
 
 const actions = {
   FETCH_ARTICLE_LIST: async ({commit}, payload = {}) => {
-    console.log('FETCH_ARTICLE_LIST')
+    // console.log('FETCH_ARTICLE_LIST')
    
     try {
       const {data} = await axios.get('/articles', {

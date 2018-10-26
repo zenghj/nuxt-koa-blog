@@ -14,7 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: "Julianzeng's blog, front-end, javascript, html, css, nodejs, webpack, vue, react" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/ssr/blog/favicon.ico' }
     ]
   },
 

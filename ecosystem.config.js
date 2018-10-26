@@ -27,8 +27,7 @@ module.exports = {
       path : '/apps/nuxt-koa-blog',
       // Pre-setup command or path to a script on your local machine
       // Post-setup commands or path to a script on the host machine
-      'post-setup': 'npm run build', // build on remote server
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js --env production',
       
     }
   }

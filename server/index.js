@@ -1,11 +1,6 @@
-
-const Koa = require('koa')
-const consola = require('consola')
+// const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
-
-const app = new Koa()
-const host = process.env.HOST || '127.0.0.1'
-const port = process.env.PORT || 8888
+const app = require('./app')
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
@@ -32,12 +27,6 @@ async function start() {
         promise && promise.then(resolve).catch(reject)
       })
     })
-  })
-
-  app.listen(port, host)
-  consola.ready({
-    message: `Server listening on http://${host}:${port}/blog/client`,
-    badge: true
   })
 }
 

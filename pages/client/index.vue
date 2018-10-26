@@ -43,6 +43,7 @@ export default {
     
   },
   fetch({store, route}) {
+    
     return Promise.all([
       store.dispatch('FETCH_ARTICLE_LIST', route.query),
       store.dispatch('FETCH_CATEGORY_LIST')

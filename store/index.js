@@ -2,6 +2,7 @@ import axios from '~/plugins/axios'
 import {Message} from 'element-ui'
 import Vue from 'vue'
 import Vuex from 'vuex'
+// import {app as appConfig} from '../server/config'
 Vue.use(Vuex);
 
 const mutations = {
@@ -18,6 +19,8 @@ const mutations = {
 
 const actions = {
   FETCH_ARTICLE_LIST: async ({commit}, payload = {}) => {
+    console.log('FETCH_ARTICLE_LIST')
+   
     try {
       const {data} = await axios.get('/articles', {
         params: {
@@ -27,13 +30,14 @@ const actions = {
           limit: 10000,
         }
       })
-  
+      
       if(data.state === 1) {
         commit(mutationsTypes.SET_ARTICLE_LIST, data.result.docs || [])
       } else {
         Message.error(data.msg || '获取列表失败')
       }
     } catch (err) {
+      // console.log(err)
       Message.error('获取列表失败')
     }
 
@@ -48,7 +52,7 @@ const actions = {
         Message.error(data.msg || '获取文章信息失败')
       }
     } catch(err) {
-      console.log(err);
+      // console.log(err);
       Message.error('获取文章信息失败')
     }
     

@@ -1,6 +1,8 @@
 import axios from 'axios'
-import {API_BASE_URL} from '~/assets/js/constants'
 
+const apiPrefix = '/blog/api';
+const host = process.env.NODE_ENV === 'production' ? 'http://45.62.111.182' : 'http://127.0.0.1:3000';
+const API_BASE_URL = host + apiPrefix;
 
 // Add a request interceptor
 axios.interceptors.request.use(function (config) {
